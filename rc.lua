@@ -55,6 +55,7 @@ end
 run_once("urxvtd")
 run_once("unclutter -root")
 run_once("guake -e tmux /bin/bash")
+run_once("safeeyes")
 -- }}}
 
 -- {{{ Variable definitions
@@ -78,7 +79,7 @@ graphics   = "gimp"
 mail       = terminal .. " -e mutt "
 
 local layouts = {
-    awful.layout.suit.tile.top,
+    awful.layout.suit.floating,
     awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
@@ -100,7 +101,7 @@ end
 -- {{{ Tags
 tags = {
    names = { "web", "term", "docs", "media", "files", "other" },
-   layout = { layouts[1], layouts[3], layouts[4], layouts[1], layouts[7], layouts[1] }
+   layout = { layouts[5], layouts[3], layouts[4], layouts[1], layouts[7], layouts[1] }
 }
 for s = 1, screen.count() do
 -- Each screen has its own tag table.
@@ -469,7 +470,7 @@ root.buttons(awful.util.table.join(
 globalkeys = awful.util.table.join(
     -- Take a screenshot
     -- https://github.com/copycat-killer/dots/blob/master/bin/screenshot
-    awful.key({ altkey }, "p", function() os.execute("screenshot") end),
+    awful.key({ altkey }, "p", function() os.execute("gnome-screenshot") end),
     
     -- change keyboard
     awful.key({ altkey }, "space", function () kbdcfg.switch() end), 
@@ -814,8 +815,8 @@ for s = 1, screen.count() do screen[s]:connect_signal("arrange",
     end)
 end
 -- }}}
-awful.util.spawn_with_shell("compton -bcG")
+--awful.util.spawn_with_shell("compton -bcG")
 awful.util.spawn_with_shell("pnmixer")
-awful.util.spawn_with_shell("redshift")
+--awful.util.spawn_with_shell("redshift")
 awful.util.spawn_with_shell("nm-applet")
 awful.util.spawn_with_shell("dropbox")
