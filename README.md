@@ -47,6 +47,4 @@ sudo apt-get install libxkbcommon-dev
 sudo apt-get install libxkbcommon-x11-dev 
 sudo apt-get install libcairo2-dev 
 sudo apt-get install libstartup-notification0-dev 
-CMAKE_ARGS="-DCMAKE_INSTALL_PREFIX=/opt/awesome" make
-sudo make install
 ```
