@@ -8,7 +8,8 @@
 
 sudo add-apt-repository  ppa:klaus-vormweg/awesome -y  # attention here maybe 4.x
 sudo apt update
-sudo apt install  awesome -y # or install specified version sudo apt-get install awesome=3.5.6-1build1
+sudo apt install  awesome -y
+# or install specified version: sudo apt-get install awesome=3.5.6-1build1
 
 sudo apt-get install cmake
 apt-get install lua5.2
