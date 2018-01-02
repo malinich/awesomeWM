@@ -101,7 +101,7 @@ end
 -- {{{ Tags
 tags = {
    names = { "web", "term", "docs", "media", "files", "other" },
-   layout = { layouts[5], layouts[3], layouts[4], layouts[1], layouts[7], layouts[1] }
+   layout = { layouts[4], layouts[3], layouts[4], layouts[1], layouts[7], layouts[1] }
 }
 for s = 1, screen.count() do
 -- Each screen has its own tag table.
