@@ -17,6 +17,8 @@ apt-get install lua5.2-dev
 
 git clone https://github.com/awesomeWM/awesome.git
 cd awesome
+sudo apt-get install fonts-font-awesome 
+sudo apt-get install asciidoc
 sudo apt-get install lua5.2-dev
 sudo apt-get install asciidoc
 sudo apt-get install libxcb
